@@ -51,7 +51,7 @@ const User = () => {
     const signer = provider.getSigner();
     const tx = await erc20
       .connect(signer)
-      .approve(spender, ethers.utils.parseEther("10"));
+      .approve(spender, ethers.constants.MaxUint256);
 
     setPending(true);
     await tx.wait();

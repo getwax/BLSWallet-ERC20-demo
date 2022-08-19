@@ -34,15 +34,15 @@ const Connection = () => {
       const provider = new ethers.providers.Web3Provider(instance);
       setGlobalProvider(provider);
 
-      window.ethereum
-        .request({ method: "eth_accounts" })
-        .then((result: any) => {
-          setConnButtonText("Connected");
-          setAcc(result[0]);
-        });
+      const result = await window.ethereum
+                              .request({ method: "eth_accounts" });
+
+      setConnButtonText("Connected");
+      setAcc(result[0]);
+
     } else if (!window.ethereum) {
-      console.log("Need to install MetaMask");
-      setErrorMessage("Please install MetaMask browser extension to interact");
+      console.log("Need to install Quill");
+      setErrorMessage("Please install Quill browser extension to interact");
     }
   };
 

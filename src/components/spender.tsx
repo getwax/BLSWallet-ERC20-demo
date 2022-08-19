@@ -27,7 +27,10 @@ const SpenderContract = () => {
   const updateAllowance = async () => {
     const erc20 = getTokenContract();
 
-    const allowance = await erc20.allowance(account, spender);
+    const allowance = await erc20.allowance(
+      "0xa386e627bf0E70f346B6d1AF82DE555190f5961B",
+      spender
+    );
     setAllowance(ethers.utils.formatEther(allowance));
     console.log(allowance);
   };

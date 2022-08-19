@@ -17,8 +17,8 @@ interface StoreModel {
 
 export const store = createStore<StoreModel>({
   account: "",
-  contract: process.env.REACT_APP_TOKEN_CONTRACT || "",
-  spender: process.env.REACT_APP_SPENDER_CONTRACT || "",
+  contract: "0x6030c15cD584574A5C694984678D50e5E9Aee1b6",
+  spender: "0xBeC869B56cF9835E26f16f7E29E1e4Ba324634b8",
   provider: null,
   reload: false,
 
