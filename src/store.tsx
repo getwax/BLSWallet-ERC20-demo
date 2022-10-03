@@ -17,8 +17,8 @@ interface StoreModel {
 
 export const store = createStore<StoreModel>({
   account: "",
-  contract: "0x6030c15cD584574A5C694984678D50e5E9Aee1b6",
-  spender: "0xBeC869B56cF9835E26f16f7E29E1e4Ba324634b8",
+  contract: "0x56377a667C6370154d43aFc937998C750f0ca9bd",
+  spender: "0x95B02CcF67ceacaBbc33927a5d7607Df590c81F6",
   provider: null,
   reload: false,
 
